@@ -1,0 +1,14 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<title>Conectando instagram</title>
+<body style="font-family:'Times New Roman',serif;font-size:12pt;line-height:1.5;text-align:justify;max-width:36em;margin:4em auto">
+<p>Volviendo a la Terminal de su Mac…</p>
+<p id="manual" hidden>Si no avanza, <a id="enlace" href="#">pulse aquí</a>. El comando de inicio de sesión debe seguir abierto.</p>
+<script>
+  var local = "http://127.0.0.1:8791/callback" + location.search;
+  document.getElementById("enlace").href = local;
+  setTimeout(function () { document.getElementById("manual").hidden = false; }, 3000);
+  location.replace(local);
+</script>
